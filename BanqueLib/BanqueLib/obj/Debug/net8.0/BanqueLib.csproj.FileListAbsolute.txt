@@ -1,0 +1,5 @@
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.AssemblyInfoInputs.cache
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.AssemblyInfo.cs
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.csproj.CoreCompileInputs.cache
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.sourcelink.json
