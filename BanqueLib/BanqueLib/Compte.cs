@@ -7,10 +7,10 @@ namespace BanqueLib
     {
         //#Region --Champs--
         private readonly int _numéro;
-        public string _détenteur;
-        public decimal _solde;
-        public StatutCompte _statut;
-        public bool _estGelé;
+        private string _détenteur;
+        private decimal _solde;
+        private StatutCompte _statut;
+        private bool _estGelé;
         //#EndRegion
 
         //#Region ---- initiateurs ----
