@@ -142,8 +142,7 @@ namespace BanqueLib
         /// <returns></returns>
         public string Description()
         {
-            string description = "";
-            description = "[IF]**********************************************\n" +
+           string description = "[IF]**********************************************\n" +
                           "[IF]*                                            *\n" +
                          $"[IF]*    COMPTE {_numéro,-33}*\n" +
                          $"[IF]*       De: {_détenteur,-33}*\n" +
