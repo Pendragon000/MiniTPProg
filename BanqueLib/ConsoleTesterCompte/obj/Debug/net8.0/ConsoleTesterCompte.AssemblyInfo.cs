@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BanqueLib")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleTesterCompte")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baeb2a72cc6f0bf0be07e439f37decc41be0401c")]
-[assembly: System.Reflection.AssemblyProductAttribute("BanqueLib")]
-[assembly: System.Reflection.AssemblyTitleAttribute("BanqueLib")]
+[assembly: System.Reflection.AssemblyProductAttribute("ConsoleTesterCompte")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ConsoleTesterCompte")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.

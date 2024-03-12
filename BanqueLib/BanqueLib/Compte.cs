@@ -2,71 +2,102 @@
 
 namespace BanqueLib
 {
+    public enum StatutCompte {Ok,Gelé }
     public class Compte
     {
-       //#Region --Champs--
-       private int numCompte;
-       private string détenteur;
-       private double solde;
-       private bool compteGelé;
+        //#Region --Champs--
+        private int numéro;
+        public string détenteur;
+        public decimal solde;
+        public StatutCompte statut;
+        public bool estGelé;
         //#EndRegion
 
         //#Region ---- initiateurs ----
-        public Compte(int numéros, string détenteur, double solde = 0.00, string status = "ok") 
+        public Compte(int numéros, string détendeur, decimal solde = 0.00m, StatutCompte status = StatutCompte.Ok, 
+            bool estGelé = false)
         {
-            ArgumentOutOfRangeException.ThrowIfNegative(numéros);
-            ArgumentOutOfRangeException.ThrowIfNotEqual(solde, double.Round(solde, 2));
-            numCompte = numéros;
-            SetDétenteur(détenteur);
-            switch (status.ToLower())
-            {
-                case "ok":
-                    compteGelé = false;
-                break;
-                case "gelé":
-                    compteGelé = true;
-                break;
-            }
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(numéros);
+            ArgumentOutOfRangeException.ThrowIfNegative(solde);
+            ArgumentOutOfRangeException.ThrowIfNotEqual(solde, decimal.Round(solde, 2));
+            this.numéro = numéros;
+            SetDétenteur(détendeur);
+            this.statut = status;
+            this.estGelé = estGelé;
+            this.solde = decimal.Round(solde,2);
         }
         //#EndRegion
 
         //#Region ---- getters / champs calculable ----
 
-        public int GetNumCompte() => numCompte;
-
-        public string GetDétenteur() => détenteur;
-
-        public double GetSolde() => solde;
-
-        public bool GetCompteGelé() => compteGelé;
-        //#EndRegion
-
-        //#Region ---- setters ----
-        public void SetDétenteur(string nom)
+        public int Numéro
         {
-            ArgumentException.ThrowIfNullOrEmpty(détenteur);
-            détenteur = nom.Trim();
+            get { return numéro; }
+        }
+
+        public string Détenteur
+        {
+            get { return détenteur; }
+        }
+
+        public decimal Solde
+        {
+            get { return solde; }
+        }
+
+        public StatutCompte Statut
+        {
+            get { return statut; }
+        }
+
+        public bool EstGelé
+        {
+            get { return estGelé; }
         }
         //#EndRegion
 
+        //#Region ---- Setters ----
+        public void SetDétenteur(string nom)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(nom);
+            ArgumentException.ThrowIfNullOrWhiteSpace(nom);
+             détenteur = nom.Trim();
+        }
         //#Region ---- Méthodes calculantes ----
 
         /// <summary>
         /// permet de savoir si on peut déposer un montant quelconque
         /// </summary>
         /// <returns></returns>
-        public bool PeutDéposer() => !compteGelé;
+        public bool PeutDéposer()
+        {
+            if(statut == StatutCompte.Ok)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// permet de savoir si on peut déposer ce montant précis
         /// </summary>
         /// <param name="montant"></param>
         /// <returns></returns>
-        public bool PeutDéposer(double montant)
+        public bool PeutDéposer(decimal montant)
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(montant);
-            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, double.Round(montant, 2));
-            return !compteGelé;
+            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, decimal.Round(montant, 2));
+            if (statut == StatutCompte.Ok)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -76,7 +107,7 @@ namespace BanqueLib
         /// <returns></returns>
         public bool PeutRetirer()
         {
-            if (solde < 0 && !compteGelé)
+            if (Solde > 0 && statut == StatutCompte.Ok)
             {
                 return true;
             }
@@ -91,11 +122,11 @@ namespace BanqueLib
         /// </summary>
         /// <param name="montant"></param>
         /// <returns></returns>
-        public bool PeutRetirer(double montant)
+        public bool PeutRetirer(decimal montant)
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(montant);
-            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, double.Round(montant, 2));
-            if (solde < montant && !compteGelé)
+            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, decimal.Round(montant, 2));
+            if (Solde > montant && statut == StatutCompte.Ok)
             {
                 return true;
             }
@@ -117,25 +148,27 @@ namespace BanqueLib
             string initial = "[IF]";
             string border = "*";
             string vide = " ";
-            string noCompte = Convert.ToString(numCompte);
-            string stringSolde = Convert.ToString(solde);
-            for (int i = 0; i < 8; i++)
+            string noCompte = Convert.ToString(Numéro);
+            string stringSolde = Convert.ToString(Solde);
+            string stringStatus = Convert.ToString(statut);
+            for (int i = 0; i < 9; i++)
             {
-                if (i == 0 || i == 7)
+                if (i == 0 || i == 8)
                 {
                     description += initial;
                     description += new string('*', longueurTableau);
-                    description += "/n";
+                    description += "\n";
                 }
-                if(i == 1 || i == 6)
+                if(i == 1 || i == 7)
                 {
+                    description += initial;
                     description += border;
                     description += new string(' ', longueurTableau - 2);
-                    description += $"{border}/n";
+                    description += $"{border}\n";
                 }
                 else
                 {
-                    for (int j = 0; j < longueurTableau + 4; j++)
+                    for (int j = 0; j < 8; j++)
                     {
                         switch (i)
                         {
@@ -143,7 +176,7 @@ namespace BanqueLib
                                 switch (j)
                                 {
                                     case 0:
-                                        description = initial;
+                                        description += initial;
                                     break;
                                     case 1:
                                         description += border;
@@ -165,7 +198,7 @@ namespace BanqueLib
                                         description += new string(' ', longueur);
                                         break;
                                     case 7:
-                                        description += $"{border}/n";
+                                        description += $"{border}\n";
                                         break;
                                 }
                                 break;
@@ -173,7 +206,7 @@ namespace BanqueLib
                                 switch (j)
                                 {
                                     case 0:
-                                        description = initial;
+                                        description += initial;
                                         break;
                                     case 1:
                                         description += border;
@@ -188,14 +221,14 @@ namespace BanqueLib
                                         description += vide;
                                         break;
                                     case 5:
-                                        description += détenteur;
+                                        description += Détenteur;
                                         break;
                                     case 6:
-                                        int longueur = longueurTableau - détenteur.Length - 1 - 12;
+                                        int longueur = longueurTableau - Détenteur.Length - 1 - 12;
                                         description += new string(' ', longueur);
                                         break;
                                     case 7:
-                                        description += $"{border}/n";
+                                        description += $"{border}\n";
                                         break;
                                 }
                                 break;
@@ -203,7 +236,7 @@ namespace BanqueLib
                                 switch (j)
                                 {
                                     case 0:
-                                        description = initial;
+                                        description += initial;
                                         break;
                                     case 1:
                                         description += border;
@@ -218,14 +251,14 @@ namespace BanqueLib
                                         description += vide;
                                         break;
                                     case 5:
-                                        description += stringSolde;
+                                        description += $"{Solde.ToString("0.00")} $";
                                         break;
                                     case 6:
-                                        int longueur = longueurTableau - stringSolde.Length - 1 - 12;
+                                        int longueur = longueurTableau - stringSolde.Length - 6 - 12;
                                         description += new string(' ', longueur);
                                         break;
                                     case 7:
-                                        description += $"{border}/n";
+                                        description += $"{border}\n";
                                         break;
                                 }
                             break;
@@ -233,7 +266,7 @@ namespace BanqueLib
                                 switch (j)
                                 {
                                     case 0:
-                                        description = initial;
+                                        description += initial;
                                         break;
                                     case 1:
                                         description += border;
@@ -242,20 +275,20 @@ namespace BanqueLib
                                         description += new string(' ', 3);
                                         break;
                                     case 3:
-                                        description += "Status";
+                                        description += "Statut:";
                                         break;
                                     case 4:
                                         description += vide;
                                         break;
                                     case 5:
-                                        description += GetCompteGeléString();
+                                        description +=statut;
                                         break;
                                     case 6:
-                                        int longueur = longueurTableau - GetCompteGeléString().Length - 1 - 12;
+                                        int longueur = longueurTableau - stringStatus.Length - 1 - 12;
                                         description += new string(' ', longueur);
                                         break;
                                     case 7:
-                                        description += $"{border}/n";
+                                        description += $"{border}\n";
                                         break;
                                 }
                             break;
@@ -274,9 +307,10 @@ namespace BanqueLib
         {
             int longeurDescription = 0;
             //besion de string pour déterminer la longeur de chaque variable
-            string noCompte = Convert.ToString(numCompte);
-            string stringSolde = Convert.ToString(solde);
-            int[] longeur = {noCompte.Length, stringSolde.Length, GetCompteGeléString().Length,détenteur.Length};
+            string noCompte = Convert.ToString(Numéro);
+            string stringSolde = Convert.ToString(Solde);
+            string stringStatus = Convert.ToString(statut);
+            int[] longeur = {noCompte.Length, stringSolde.Length, stringStatus.Length,Détenteur.Length};
             foreach(int i in longeur)
             {
                 if(i > longeurDescription)
@@ -286,23 +320,6 @@ namespace BanqueLib
             }
             return longeurDescription + 13 + 4;
         }
-
-        /// <summary>
-        /// obtient le status en string de la variable compteGelé
-        /// </summary>
-        /// <returns></returns>
-        private string GetCompteGeléString()
-        {
-            if (compteGelé)
-            {
-                return "gelé";
-            }
-            else
-            {
-                return "ok";
-            }
-        }
-
         //#EndRegion
 
         //#Region ---- Méthodes modifiantes ----
@@ -312,17 +329,17 @@ namespace BanqueLib
         /// </summary>
         /// <param name="montant"></param>
         /// <exception cref="InvalidOperationException"></exception>
-        public void Déposer(double montant)
+        public void Déposer(decimal montant)
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(montant);
-            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, double.Round(montant, 2));
+            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, decimal.Round(montant, 2));
             if (!PeutDéposer(montant))
             {
                 throw new InvalidOperationException();
             }
             else
             {
-                solde += montant;
+                solde += decimal.Round(montant, 2);
             }
         }
 
@@ -331,17 +348,17 @@ namespace BanqueLib
         /// </summary>
         /// <param name="montant"></param>
         /// <exception cref="InvalidOperationException"></exception>
-        public void Retirer(double montant)
+        public void Retirer(decimal montant)
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(montant);
-            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, double.Round(montant, 2));
+            ArgumentOutOfRangeException.ThrowIfNotEqual(montant, decimal.Round(montant, 2));
             if (!PeutRetirer(montant))
             {
                 throw new InvalidOperationException();
             }
             else
             {
-                solde += montant;
+                solde -= decimal.Round(montant, 2);
             }
         }
 
@@ -350,12 +367,12 @@ namespace BanqueLib
         /// </summary>
         /// <returns></returns>
         /// <exception cref="InvalidOperationException"></exception>
-        public double Vider()
+        public decimal Vider()
         {
-            if(solde == 0) throw new InvalidOperationException();
-            if(compteGelé) throw new InvalidOperationException();
-            double numRetirer = solde;
-            solde = 0;
+            if(Solde == 0) throw new InvalidOperationException("Vider");
+            if(statut == StatutCompte.Gelé) throw new InvalidOperationException("Vider");
+            decimal numRetirer = Solde;
+            solde = 0.00m;
             return numRetirer;
         }
 
@@ -364,15 +381,19 @@ namespace BanqueLib
         /// </summary>
         public void Geler()
         {
-            compteGelé = true;
+            if(statut == StatutCompte.Gelé)throw new InvalidOperationException("Geler");   
+            statut = StatutCompte.Gelé;
+            estGelé = true;
         }
 
         /// <summary>
         /// Dégèle le compte
         /// </summary>
-        public void DéGeler()
+        public void Dégeler()
         {
-            compteGelé = false;
+            if(statut == StatutCompte.Ok)throw new InvalidOperationException("Dégeler");
+            statut = StatutCompte.Ok;
+            estGelé = false;
         }
 
         //#EndRegions
