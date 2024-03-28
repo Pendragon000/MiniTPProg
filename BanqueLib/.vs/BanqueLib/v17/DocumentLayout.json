@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE19E0CE-C968-487E-AB27-D45AFD4687AF}|ConsoleSimulerCompte\\ConsoleSimulerCompte.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\consolesimulercompte\\consolesimulercompte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE19E0CE-C968-487E-AB27-D45AFD4687AF}|ConsoleSimulerCompte\\ConsoleSimulerCompte.csproj|solutionrelative:consolesimulercompte\\consolesimulercompte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\testbanque\\testsa_compteok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|solutionrelative:testbanque\\testsa_compteok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\testbanque\\testsb_compteerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|solutionrelative:testbanque\\testsb_compteerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|solutionrelative:banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE19E0CE-C968-487E-AB27-D45AFD4687AF}|ConsoleSimulerCompte\\ConsoleSimulerCompte.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\consolesimulercompte\\consolesimulercompte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE19E0CE-C968-487E-AB27-D45AFD4687AF}|ConsoleSimulerCompte\\ConsoleSimulerCompte.csproj|solutionrelative:consolesimulercompte\\consolesimulercompte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86CEC651-87D8-4A48-B4C1-17E3214D1C56}|ConsoleTesterCompte\\ConsoleTesterCompte.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\consoletestercompte\\consoletestercompte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,20 +30,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Compte.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeDocumentMoniker": "BanqueLib\\Compte.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeToolTip": "BanqueLib\\Compte.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAUwLEAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T12:06:03.452Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestsB_CompteErreur.cs",
+              "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsB_CompteErreur.cs",
+              "RelativeDocumentMoniker": "TestBanque\\TestsB_CompteErreur.cs",
+              "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsB_CompteErreur.cs",
+              "RelativeToolTip": "TestBanque\\TestsB_CompteErreur.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:30:46.884Z",
               "EditorCaption": ""
             },
             {
@@ -53,19 +74,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TestsA_CompteOk.cs",
+              "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsA_CompteOk.cs",
+              "RelativeDocumentMoniker": "TestBanque\\TestsA_CompteOk.cs",
+              "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsA_CompteOk.cs",
+              "RelativeToolTip": "TestBanque\\TestsA_CompteOk.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAwwDQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:03:38.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ConsoleSimulerCompte.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\ConsoleSimulerCompte\\ConsoleSimulerCompte.cs",
               "RelativeDocumentMoniker": "ConsoleSimulerCompte\\ConsoleSimulerCompte.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\ConsoleSimulerCompte\\ConsoleSimulerCompte.cs",
               "RelativeToolTip": "ConsoleSimulerCompte\\ConsoleSimulerCompte.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAuwJcAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T20:49:11.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ConsoleTesterCompte.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\ConsoleTesterCompte\\ConsoleTesterCompte.cs",
               "RelativeDocumentMoniker": "ConsoleTesterCompte\\ConsoleTesterCompte.cs",
@@ -73,8 +107,7 @@
               "RelativeToolTip": "ConsoleTesterCompte\\ConsoleTesterCompte.cs",
               "ViewState": "AQIAAIwAAAAAAAAAAAAqwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T21:44:34.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T21:44:34.617Z"
             }
           ]
         }

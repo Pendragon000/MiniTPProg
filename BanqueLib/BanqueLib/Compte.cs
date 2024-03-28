@@ -14,16 +14,18 @@ namespace BanqueLib
         //#EndRegion
 
         //#Region ---- initiateurs ----
-        public Compte(int numéros, string détendeur, decimal solde = 0.00m, StatutCompte status = StatutCompte.Ok, 
-            bool estGelé = false)
+        public Compte(int Numéro, string détendeur, decimal solde = 0.00m, StatutCompte status = StatutCompte.Ok)
         {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(numéros);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(Numéro);
             ArgumentOutOfRangeException.ThrowIfNegative(solde);
             ArgumentOutOfRangeException.ThrowIfNotEqual(solde, decimal.Round(solde, 2));
-            _numéro = numéros;
+            _numéro = Numéro;
             SetDétenteur(détendeur);
             _statut = status;
-            _estGelé = estGelé;
+            if (status == StatutCompte.Gelé) 
+            {
+                _estGelé = true;
+            }
             _solde = decimal.Round(solde,2);
         }
         //#EndRegion
@@ -57,11 +59,11 @@ namespace BanqueLib
         //#EndRegion
 
         //#Region ---- Setters ----
-        public void SetDétenteur(string nom)
+        public void SetDétenteur(string Détenteur)
         {
-            ArgumentException.ThrowIfNullOrEmpty(nom);
-            ArgumentException.ThrowIfNullOrWhiteSpace(nom);
-            _détenteur = nom.Trim();
+            ArgumentException.ThrowIfNullOrEmpty(Détenteur);
+            ArgumentException.ThrowIfNullOrWhiteSpace(Détenteur);
+            _détenteur = Détenteur.Trim();
         }
         //#Region ---- Méthodes calculantes ----
 
@@ -126,7 +128,7 @@ namespace BanqueLib
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(montant);
             ArgumentOutOfRangeException.ThrowIfNotEqual(montant, decimal.Round(montant, 2));
-            if (Solde > montant && _statut == StatutCompte.Ok)
+            if (Solde >= montant && _statut == StatutCompte.Ok)
             {
                 return true;
             }
@@ -144,10 +146,10 @@ namespace BanqueLib
         {
            string description = "[IF]**********************************************\n" +
                           "[IF]*                                            *\n" +
-                         $"[IF]*    COMPTE {_numéro,-33}*\n" +
-                         $"[IF]*       De: {_détenteur,-33}*\n" +
-                         $"[IF]*    Solde: {_solde,-33}*\n" +
-                         $"[IF]*   Statut: {_statut,-33}*\n" +
+                         $"[IF]*    COMPTE  {_numéro,-33}*\n" +
+                         $"[IF]*       De:  {_détenteur,-33}*\n" +
+                         $"[IF]*    Solde:  {_solde ,-33:C}*\n" +
+                         $"[IF]*   Statut:  {_statut,-33}*\n" +
                           "[IF]*                                            *\n" +
                           "[IF]**********************************************\n";
             return description;
