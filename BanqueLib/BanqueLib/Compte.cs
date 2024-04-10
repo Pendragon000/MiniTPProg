@@ -1,4 +1,7 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
 
 namespace BanqueLib
 {
@@ -14,19 +17,26 @@ namespace BanqueLib
         //#EndRegion
 
         //#Region ---- initiateurs ----
-        public Compte(int Numéro, string détendeur, decimal solde = 0.00m, StatutCompte status = StatutCompte.Ok)
+        
+        public Compte(int Numéro, string Détenteur, decimal solde = 0.00m, StatutCompte status = StatutCompte.Ok)
         {
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(Numéro);
             ArgumentOutOfRangeException.ThrowIfNegative(solde);
             ArgumentOutOfRangeException.ThrowIfNotEqual(solde, decimal.Round(solde, 2));
+            //ArgumentException.ThrowIfNullOrEmpty(Détenteur);
+            //ArgumentException.ThrowIfNullOrWhiteSpace(Détenteur);
             _numéro = Numéro;
-            SetDétenteur(détendeur);
+            
+            //_détenteur = Détenteur.Trim();
             _statut = status;
             if (status == StatutCompte.Gelé) 
             {
                 _estGelé = true;
+
             }
             _solde = decimal.Round(solde,2);
+
+            SetDétenteur(Détenteur);
         }
         //#EndRegion
 
@@ -59,6 +69,7 @@ namespace BanqueLib
         //#EndRegion
 
         //#Region ---- Setters ----
+        [MemberNotNull]
         public void SetDétenteur(string Détenteur)
         {
             ArgumentException.ThrowIfNullOrEmpty(Détenteur);
@@ -231,5 +242,30 @@ namespace BanqueLib
         }
 
         //#EndRegions
+
+        // -----Sérialisation-----
+        public void SérialiserCompte()
+        {
+            string json = JsonSerializer.Serialize(this, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+            File.WriteAllText("compte.json", json);
+        }
+
+        public Compte DésérialiserCompte()
+        {
+            string Ejson = File.ReadAllText("compte.json");
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                IgnoreNullValues = true
+            };
+            var tempObject = JsonSerializer.Deserialize<JsonElement>(Ejson);
+            int Numéro = tempObject.GetProperty("Numéro").GetInt32();
+            string Détenteur = tempObject.GetProperty("Détenteur").GetString();
+            decimal Solde = tempObject.GetProperty("Solde").GetDecimal();
+            int Statut = tempObject.GetProperty("Statut").GetInt32();
+            return new Compte(Numéro, Détenteur, Solde, (StatutCompte)Statut);
+        }
     }
 }

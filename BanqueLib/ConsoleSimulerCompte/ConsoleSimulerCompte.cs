@@ -1,4 +1,8 @@
-﻿using BanqueLib;
+﻿
+using BanqueLib;
+using System.Xml;
+using System.Text.Json;
+string filePath = "compte.json";
 Compte compte = new Compte(Random.Shared.Next(100,1000),"Isaak Fortin");
 while (true)
 {
@@ -14,6 +18,8 @@ while (true)
         "7 - Vider\n" +
         "8 - Geler\n" +
         "9 - Dégeler\n" +
+        "0 - To Json\n" +
+        "= - From Json" +
         "q - Quitter\n" +
         "r - Reset\n" +
         "\nVotre choix, Isaak Fortin?\n");
@@ -132,6 +138,16 @@ while (true)
             {
                 Console.WriteLine("** Impossible de dégeler un compte non gelé.");
             }
+            Console.WriteLine("\nAppuyer sur ENTER pour continuer...");
+            Console.ReadLine();
+            break;
+        case '0':
+            compte.SérialiserCompte();
+            Console.WriteLine("\nAppuyer sur ENTER pour continuer...");
+            Console.ReadLine();
+            break;
+        case '=':
+            compte = compte.DésérialiserCompte();
             Console.WriteLine("\nAppuyer sur ENTER pour continuer...");
             Console.ReadLine();
             break;
