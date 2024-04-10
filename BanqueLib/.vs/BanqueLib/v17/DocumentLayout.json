@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "BanqueLib\\Compte.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeToolTip": "BanqueLib\\Compte.cs",
-              "ViewState": "AQIAAOgAAAAAAAAAAAAkwP8AAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAP8AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T12:06:03.452Z",
               "IsPinned": true,
@@ -47,6 +47,10 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ConsoleSimulerCompte.cs",
@@ -56,8 +60,7 @@
               "RelativeToolTip": "ConsoleSimulerCompte\\ConsoleSimulerCompte.cs",
               "ViewState": "AQIAAIoAAAAAAAAAAAAAAJcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T20:49:11.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T20:49:11.37Z"
             }
           ]
         }
