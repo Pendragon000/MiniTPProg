@@ -69,7 +69,7 @@ namespace BanqueLib
         //#EndRegion
 
         //#Region ---- Setters ----
-        [MemberNotNull]
+        [MemberNotNull(nameof(_détenteur))]
         public void SetDétenteur(string Détenteur)
         {
             ArgumentException.ThrowIfNullOrEmpty(Détenteur);
@@ -258,11 +258,11 @@ namespace BanqueLib
             string Ejson = File.ReadAllText("compte.json");
             JsonSerializerOptions options = new JsonSerializerOptions
             {
-                IgnoreNullValues = true
+                WriteIndented = true
             };
             var tempObject = JsonSerializer.Deserialize<JsonElement>(Ejson);
             int Numéro = tempObject.GetProperty("Numéro").GetInt32();
-            string Détenteur = tempObject.GetProperty("Détenteur").GetString();
+            string Détenteur = tempObject.GetProperty("Détenteur").GetString()!;
             decimal Solde = tempObject.GetProperty("Solde").GetDecimal();
             int Statut = tempObject.GetProperty("Statut").GetInt32();
             return new Compte(Numéro, Détenteur, Solde, (StatutCompte)Statut);

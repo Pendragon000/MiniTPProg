@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTesterCompte", "Cons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleSimulerCompte", "ConsoleSimulerCompte\ConsoleSimulerCompte.csproj", "{CE19E0CE-C968-487E-AB27-D45AFD4687AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBanque", "TestBanque\TestBanque.csproj", "{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBanque", "TestBanque\TestBanque.csproj", "{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsSimulerCompte", "WinFormsSimulerCompte\WinFormsSimulerCompte.csproj", "{CE271E79-B384-4B75-B762-F1D718076C0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14021248-B24D-41B9-BAF1-F37C3C8F18A8} = {14021248-B24D-41B9-BAF1-F37C3C8F18A8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE271E79-B384-4B75-B762-F1D718076C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE271E79-B384-4B75-B762-F1D718076C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE271E79-B384-4B75-B762-F1D718076C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE271E79-B384-4B75-B762-F1D718076C0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
