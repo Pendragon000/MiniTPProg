@@ -46,13 +46,13 @@ namespace WinFormsSimulerCompte
             radioButton0a1 = new RadioButton();
             buttonRandom = new Button();
             buttonRestMontant = new Button();
-            numericUpDown1 = new NumericUpDown();
+            numericUpDownMontant = new NumericUpDown();
             buttonRetirer = new Button();
             buttonVider = new Button();
             buttonReset = new Button();
             groupBoxDonneCompte.SuspendLayout();
             groupBoxMontant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMontant).BeginInit();
             SuspendLayout();
             // 
             // groupBoxDonneCompte
@@ -81,13 +81,17 @@ namespace WinFormsSimulerCompte
             checkBoxGele.TabIndex = 6;
             checkBoxGele.Text = "Gelé";
             checkBoxGele.UseVisualStyleBackColor = true;
+            checkBoxGele.CheckedChanged += checkBoxGele_CheckedChanged;
+            checkBoxGele.Click += checkBoxGele_Click;
             // 
             // textBoxSolde
             // 
             textBoxSolde.Location = new Point(149, 188);
             textBoxSolde.Name = "textBoxSolde";
+            textBoxSolde.ReadOnly = true;
             textBoxSolde.Size = new Size(344, 39);
             textBoxSolde.TabIndex = 5;
+            textBoxSolde.TextChanged += textBoxSolde_TextChanged;
             // 
             // textBoxDetenteur
             // 
@@ -95,6 +99,8 @@ namespace WinFormsSimulerCompte
             textBoxDetenteur.Name = "textBoxDetenteur";
             textBoxDetenteur.Size = new Size(344, 39);
             textBoxDetenteur.TabIndex = 4;
+            textBoxDetenteur.KeyPress += textBoxDetenteur_KeyPress;
+            textBoxDetenteur.Leave += textBoxDetenteur_Leave;
             // 
             // textBoxNumero
             // 
@@ -140,6 +146,7 @@ namespace WinFormsSimulerCompte
             buttonDeposer.TabIndex = 1;
             buttonDeposer.Text = "Déposer";
             buttonDeposer.UseVisualStyleBackColor = true;
+            buttonDeposer.Click += buttonDeposer_Click;
             // 
             // textBoxLog
             // 
@@ -161,7 +168,7 @@ namespace WinFormsSimulerCompte
             groupBoxMontant.Controls.Add(radioButton0a1);
             groupBoxMontant.Controls.Add(buttonRandom);
             groupBoxMontant.Controls.Add(buttonRestMontant);
-            groupBoxMontant.Controls.Add(numericUpDown1);
+            groupBoxMontant.Controls.Add(numericUpDownMontant);
             groupBoxMontant.Location = new Point(553, 12);
             groupBoxMontant.Name = "groupBoxMontant";
             groupBoxMontant.Size = new Size(409, 254);
@@ -226,6 +233,7 @@ namespace WinFormsSimulerCompte
             buttonRandom.TabIndex = 2;
             buttonRandom.Text = "Random";
             buttonRandom.UseVisualStyleBackColor = true;
+            buttonRandom.Click += buttonRandom_Click;
             // 
             // buttonRestMontant
             // 
@@ -236,19 +244,23 @@ namespace WinFormsSimulerCompte
             buttonRestMontant.TabIndex = 1;
             buttonRestMontant.Text = "0.01";
             buttonRestMontant.UseVisualStyleBackColor = true;
+            buttonRestMontant.Click += buttonRestMontant_Click;
             // 
-            // numericUpDown1
+            // numericUpDownMontant
             // 
-            numericUpDown1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numericUpDown1.Location = new Point(33, 54);
-            numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.RightToLeft = RightToLeft.No;
-            numericUpDown1.Size = new Size(133, 39);
-            numericUpDown1.TabIndex = 0;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericUpDownMontant.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            numericUpDownMontant.DecimalPlaces = 2;
+            numericUpDownMontant.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericUpDownMontant.Location = new Point(33, 54);
+            numericUpDownMontant.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownMontant.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericUpDownMontant.Name = "numericUpDownMontant";
+            numericUpDownMontant.ReadOnly = true;
+            numericUpDownMontant.RightToLeft = RightToLeft.No;
+            numericUpDownMontant.Size = new Size(133, 39);
+            numericUpDownMontant.TabIndex = 0;
+            numericUpDownMontant.Value = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericUpDownMontant.ValueChanged += numericUpDownMontant_ValueChanged;
             // 
             // buttonRetirer
             // 
@@ -259,6 +271,7 @@ namespace WinFormsSimulerCompte
             buttonRetirer.TabIndex = 4;
             buttonRetirer.Text = "Retirer";
             buttonRetirer.UseVisualStyleBackColor = true;
+            buttonRetirer.Click += buttonRetirer_Click;
             // 
             // buttonVider
             // 
@@ -269,6 +282,7 @@ namespace WinFormsSimulerCompte
             buttonVider.TabIndex = 5;
             buttonVider.Text = "Vider";
             buttonVider.UseVisualStyleBackColor = true;
+            buttonVider.Click += buttonVider_Click;
             // 
             // buttonReset
             // 
@@ -279,6 +293,7 @@ namespace WinFormsSimulerCompte
             buttonReset.TabIndex = 6;
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += buttonReset_Click;
             // 
             // FromIsaakFortin
             // 
@@ -299,7 +314,7 @@ namespace WinFormsSimulerCompte
             groupBoxDonneCompte.PerformLayout();
             groupBoxMontant.ResumeLayout(false);
             groupBoxMontant.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMontant).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -317,7 +332,7 @@ namespace WinFormsSimulerCompte
         private TextBox textBoxDetenteur;
         private TextBox textBoxNumero;
         private GroupBox groupBoxMontant;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDownMontant;
         private RadioButton radioButton0a1;
         private Button buttonRandom;
         private Button buttonRestMontant;
