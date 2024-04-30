@@ -8,7 +8,7 @@ namespace WinFormsSimulerCompte
         private int PlancherRand;
         private readonly Compte _compte;
         private Compte? _compteReset;
-        public FromIsaakFortin(ref Compte compte)
+        public FromIsaakFortin(Compte compte)
         {
             _compte = compte;
             InitializeComponent();

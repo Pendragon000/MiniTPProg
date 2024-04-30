@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\winformssimulercompte\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|solutionrelative:banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\winformssimulercompte\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|solutionrelative:winformssimulercompte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE271E79-B384-4B75-B762-F1D718076C0D}|WinFormsSimulerCompte\\WinFormsSimulerCompte.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\winformssimulercompte\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsSimulerCompte\\Form1.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Form1.cs",
               "RelativeToolTip": "WinFormsSimulerCompte\\Form1.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBQAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T21:18:52.207Z",
               "IsPinned": true,
@@ -59,39 +59,42 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsSimulerCompte\\Form1.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Form1.cs [Conception]",
               "RelativeToolTip": "WinFormsSimulerCompte\\Form1.cs [Conception]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T18:04:49.618Z",
-              "EditorCaption": " [Conception]"
+              "WhenOpened": "2024-04-29T18:04:49.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Compte.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeDocumentMoniker": "BanqueLib\\Compte.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeToolTip": "BanqueLib\\Compte.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAASwH4AAAANAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAcwH4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T12:06:03.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Program.cs",
               "RelativeDocumentMoniker": "WinFormsSimulerCompte\\Program.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\WinFormsSimulerCompte\\Program.cs",
               "RelativeToolTip": "WinFormsSimulerCompte\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCMAAAAZAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwB4AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T21:26:24.149Z",
               "EditorCaption": ""
@@ -106,8 +109,7 @@
               "RelativeToolTip": "WinFormsSimulerCompte\\Form1.Designer.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAtwFIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T21:19:04.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T21:19:04.647Z"
             }
           ]
         }

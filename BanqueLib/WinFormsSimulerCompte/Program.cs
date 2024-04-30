@@ -28,7 +28,7 @@ namespace WinFormsSimulerCompte
             }
             Application.ApplicationExit += Application_ApplicationExit;
             ApplicationConfiguration.Initialize();
-            Application.Run(new FromIsaakFortin(ref modèle));
+            Application.Run(new FromIsaakFortin(modèle));
         }
 
         private static void Application_ApplicationExit(object? sender, EventArgs e)

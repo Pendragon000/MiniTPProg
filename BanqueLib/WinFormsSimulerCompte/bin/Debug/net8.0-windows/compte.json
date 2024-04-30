@@ -2,6 +2,6 @@
   "Num\u00E9ro": 125,
   "D\u00E9tenteur": "Isaak Fortin45",
   "Solde": 0.01,
-  "Statut": 0,
-  "EstGel\u00E9": false
+  "Statut": 1,
+  "EstGel\u00E9": true
 }
