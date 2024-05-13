@@ -11,7 +11,8 @@ namespace BanqueLib
     public class Banque
     {
         public string Nom { get; init; }
-        public List<Compte> Comptes { get; private set; }
+        private List<Compte> _comptes;
+        public IReadOnlyList<Compte> Comptes { get => _comptes.OrderBy(c => c.Numéro).ToList();}
         public int ProchainNuméro { get; private set; }
         public int NombreDeComptes
         {
@@ -40,13 +41,13 @@ namespace BanqueLib
                 return total;
             }
         }
-        public Banque(string nom, int prochainNumero = 1)
+        public Banque(string nom, int prochainNuméro = 1)
         {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(prochainNumero);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(prochainNuméro);
             ArgumentException.ThrowIfNullOrWhiteSpace(nom);
             this.Nom = nom;
-            ProchainNuméro = prochainNumero;
-            Comptes = new List<Compte>();
+            ProchainNuméro = prochainNuméro;
+            _comptes = new List<Compte>();
         }
         public Banque(string Nom, IEnumerable<Compte> comptes)
         {
@@ -54,6 +55,7 @@ namespace BanqueLib
 
             if (comptes is not null)
             {
+                _comptes = comptes.ToList();
                 if (comptes.Any(c => c == null))
                 {
                     throw new ArgumentException("Un compte est null", "Comptes");
@@ -67,48 +69,52 @@ namespace BanqueLib
                 {
                     ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(ProchainNuméro, c.Numéro);
                 }
-                Comptes = comptes.ToList();
             }
             else
             {
-                Comptes = new List<Compte>();
+                ProchainNuméro = 1;
+                _comptes = new List<Compte>();
             }
 
             this.Nom = Nom;
 
         }
-        public Banque(string Nom, int prochainNumero, IEnumerable<Compte> comptes) : this(Nom, prochainNumero)
+        public Banque(string Nom, int prochainNuméro, IEnumerable<Compte> Comptes) : this(Nom, prochainNuméro)
         {
-            if (comptes is not null)
+            if (Comptes is not null)
             {
-                if (comptes.GroupBy(c => c.Numéro).Any(g => g.Count() > 1))
+                if (Comptes.Any(c=> c == null))
+                {
+                    throw new ArgumentException(); 
+                }
+                foreach (Compte c in Comptes)
+                {
+                    ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(this.ProchainNuméro, c.Numéro);
+                }
+                if (Comptes.GroupBy(c => c.Numéro).Any(g => g.Count() > 1))
                 {
                     throw new ArgumentException("Un Compte est dupliqué", "Comptes");
                 }
-                foreach (Compte c in comptes)
-                {
-                    ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(ProchainNuméro, c.Numéro);
-                }
-                Comptes = comptes.ToList();
+                _comptes = Comptes.ToList();
             }
             else
             {
-                Comptes = new List<Compte>();
+                _comptes = new List<Compte>();
             }
         }
 
         public string DescriptionSommaire()
         {
             string description =
-                         "[IF]============================================================================\n" +
-                         "[IF]|                                                                          |\n" +
-                        $"[IF]|          Banque  {Nom,-56}|\n" +
-                         "[IF]|                                                                          |\n" +
-                        $"[IF]|   ProchainNuméro:  {ProchainNuméro,-54}|\n" +
-                        $"[IF]|   NombreDeCompte:  {NombreDeComptes,-54}|\n" +
-                        $"[IF]| Total des dépots:  {TotalDesDépôts,-54:C}|\n" +
-                         "[IF]|                                                                          |\n" +
-                         "[IF]============================================================================\n";
+                         "[IF]=============================================================================\n" +
+                         "[IF]|                                                                           |\n" +
+                        $"[IF]|           Banque  {Nom,-56}|\n" +
+                         "[IF]|                                                                           |\n" +
+                        $"[IF]|   Prochain numéro:  {ProchainNuméro,-54}|\n" +
+                        $"[IF]| Nombre de comptes:  {NombreDeComptes,-54}|\n" +
+                        $"[IF]|  Total des dépôts:  {TotalDesDépôts,-54:C}|\n" +
+                         "[IF]|                                                                           |\n" +
+                         "[IF]=============================================================================\n";
             return description;
         }
 
@@ -117,22 +123,9 @@ namespace BanqueLib
             string description = "";
             if (Comptes != null)
             {
-                //trie les comptes en ordre croissant selon le numéros de comptes
-                for (int i = 0; i < Comptes.Count - 1; i++)
-                {
-                    for (int j = i + 1; j < Comptes.Count; j++)
-                    {
-                        if (Comptes[i].Numéro > Comptes[j].Numéro)
-                        {
-                            Compte temp = Comptes[i];
-                            Comptes[i] = Comptes[j];
-                            Comptes[j] = temp;
-                        }
-                    }
-                }
                 foreach (Compte c in Comptes)
                 {
-                    description += $"[IF]  #{c.Numéro,-8}{c.Détenteur,-30}{c.Solde,-10:C}{c.Statut}\n\n";
+                    description += $"[IF]  # "+$"{c.Numéro,-8}{c.Détenteur,-30}{c.Solde,-10:C}{c.Statut}\n\n";
                 }
             }
             return description;
@@ -142,23 +135,23 @@ namespace BanqueLib
         {
             if (Comptes == null)
             {
-                Comptes = new List<Compte>() { };
+                _comptes = new List<Compte>() { };
             }
             Compte compteTemp = new Compte(ProchainNuméro, Détenteur);
-            Comptes.Add(compteTemp);
+            _comptes.Add(compteTemp);
             ProchainNuméro++;
             return compteTemp;
         }
-        public Compte? ChercherCompte(int Num)
+        public Compte? ChercherCompte(int numéro)
         {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(Num);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(numéro);
             if (Comptes == null)
             {
                 return null;
             }
             foreach (Compte c in Comptes)
             {
-                if (c.Numéro == Num)
+                if (c.Numéro == numéro)
                 {
                     return c;
                 }
@@ -168,11 +161,29 @@ namespace BanqueLib
         public bool PeutSupprimerCompte(Compte compte)
         {
             ArgumentNullException.ThrowIfNull(compte);
-            if(Comptes is null)
+            Compte? compteTrouver = null;
+            foreach (Compte c in Comptes)
+            {
+                if (c == compte)
+                    compteTrouver = c;
+            }
+            if (compteTrouver == null)
+                return false;
+            else if (compteTrouver.Statut == StatutCompte.Gelé)
+                return false;
+            else if (compteTrouver.Solde != 0)
+                return false;
+            else
+                return true;
+        }
+        public bool PeutSupprimerCompte(int numéro)
+        {
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(numéro);
+            if (Comptes == null)
             {
                 return false;
             }
-            Compte? compteTrouver = Comptes.Find(comptee => comptee.Numéro == compte.Numéro);
+            Compte? compteTrouver = _comptes.Find(compte => compte.Numéro == numéro);
             if (compteTrouver == null)
             {
                 return false;
@@ -190,31 +201,6 @@ namespace BanqueLib
                 return true;
             }
         }
-        public bool PeutSupprimerCompte(int Num)
-        {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(Num);
-            if (Comptes == null)
-            {
-                return false;
-            }
-            Compte? compteTrouver = Comptes.Find(compte => compte.Numéro == Num);
-            if (compteTrouver == null)
-            {
-                throw new ArgumentNullException();
-            }
-            else if (compteTrouver.Statut == StatutCompte.Gelé)
-            {
-                return false;
-            }
-            else if(compteTrouver.Solde != 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
         public void SupprimerCompte(Compte compte)
         {
             ArgumentNullException.ThrowIfNull(compte);
@@ -222,15 +208,20 @@ namespace BanqueLib
             {
                 throw new ArgumentException();
             }
-            Comptes.Remove(compte);
+            _comptes.Remove(compte);
         }
-        public void SupprimerCompte(int Num)
+        public void SupprimerCompte(int numéro)
         {
-            if (!PeutSupprimerCompte(Num) || Comptes is null)
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(numéro);
+            if (Comptes == null)
             {
                 throw new ArgumentException();
             }
-            Comptes.Remove(Comptes.Find(compte => compte.Numéro == Num)!);
+            if (!PeutSupprimerCompte(numéro))
+            {
+                throw new ArgumentException();
+            }
+            _comptes.Remove(_comptes.Find(compte => compte.Numéro == numéro)!);
         }
     }
 }

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\banquelib\\banque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\testbanque\\testsd_banqueerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|solutionrelative:testbanque\\testsd_banqueerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\banquelib\\banque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|solutionrelative:banquelib\\banque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07D594F2-E22B-451E-85BB-5888E3C8B5F7}|ConsoleTesterBanque\\ConsoleTesterBanque.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\consoletesterbanque\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07D594F2-E22B-451E-85BB-5888E3C8B5F7}|ConsoleTesterBanque\\ConsoleTesterBanque.csproj|solutionrelative:consoletesterbanque\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\testbanque\\testsc_banqueok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|solutionrelative:testbanque\\testsc_banqueok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14021248-B24D-41B9-BAF1-F37C3C8F18A8}|BanqueLib\\BanqueLib.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\banquelib\\compte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,40 +41,57 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\ConsoleTesterBanque\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleTesterBanque\\Program.cs",
-              "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\ConsoleTesterBanque\\Program.cs",
-              "RelativeToolTip": "ConsoleTesterBanque\\Program.cs",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAAANQAAAANAAAA",
+              "DocumentIndex": 2,
+              "Title": "TestsC_BanqueOk.cs",
+              "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsC_BanqueOk.cs",
+              "RelativeDocumentMoniker": "TestBanque\\TestsC_BanqueOk.cs",
+              "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsC_BanqueOk.cs",
+              "RelativeToolTip": "TestBanque\\TestsC_BanqueOk.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwFkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T02:55:59.846Z",
+              "WhenOpened": "2024-05-13T17:30:13.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TestsD_BanqueErreur.cs",
+              "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsD_BanqueErreur.cs",
+              "RelativeDocumentMoniker": "TestBanque\\TestsD_BanqueErreur.cs",
+              "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\TestBanque\\TestsD_BanqueErreur.cs",
+              "RelativeToolTip": "TestBanque\\TestsD_BanqueErreur.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAuwFMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T17:30:25.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Banque.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Banque.cs",
               "RelativeDocumentMoniker": "BanqueLib\\Banque.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Banque.cs",
               "RelativeToolTip": "BanqueLib\\Banque.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAgwFgAAAARAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAswFEAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T00:29:50.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Compte.cs",
               "DocumentMoniker": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeDocumentMoniker": "BanqueLib\\Compte.cs",
               "ToolTip": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\BanqueLib\\Compte.cs",
               "RelativeToolTip": "BanqueLib\\Compte.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAAA8BAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAswCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T12:06:03.452Z"
             }

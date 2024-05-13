@@ -1,11 +1,11 @@
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.deps.json
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.dll
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.pdb
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.AssemblyInfoInputs.cache
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.AssemblyInfo.cs
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.csproj.CoreCompileInputs.cache
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.sourcelink.json
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.deps.json
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.dll
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\bin\Debug\net8.0\BanqueLib.pdb
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.dll
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\refint\BanqueLib.dll
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\BanqueLib\obj\Debug\net8.0\BanqueLib.pdb
