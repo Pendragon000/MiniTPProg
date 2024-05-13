@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsSimulerCompte")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e321cc1e46af75dd9e8e3d9f3d40a3a8cc7249d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04ae890c967638156f65a6f81a69a8574ae0a72e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinFormsSimulerCompte")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinFormsSimulerCompte")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

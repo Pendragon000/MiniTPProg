@@ -1,4 +1,10 @@
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\CoverletSourceRootsMapping_TestBanque
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.csproj.AssemblyReference.cache
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.AssemblyInfoInputs.cache
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.AssemblyInfo.cs
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.csproj.CoreCompileInputs.cache
+C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.sourcelink.json
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\testhost.dll
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\testhost.exe
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -101,12 +107,6 @@ C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\Banque
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\BanqueLib.pdb
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.csproj.AssemblyReference.cache
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.AssemblyInfoInputs.cache
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.AssemblyInfo.cs
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.csproj.CoreCompileInputs.cache
-C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.sourcelink.json
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.csproj.Up2Date
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\TestBanque.dll
 C:\Users\isaaf\Documents\MiniTPProg\BanqueLib\TestBanque\obj\Debug\net8.0\refint\TestBanque.dll
