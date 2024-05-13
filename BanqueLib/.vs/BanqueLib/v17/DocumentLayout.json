@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|C:\\Users\\isaaf\\Documents\\MiniTPProg\\BanqueLib\\testbanque\\testsd_banqueerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|c:\\users\\isaaf\\documents\\minitpprog\\banquelib\\testbanque\\testsd_banqueerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69CE4AB3-B41A-4D1D-B054-73E341FEC7F1}|TestBanque\\TestBanque.csproj|solutionrelative:testbanque\\testsd_banqueerreur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +42,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
@@ -54,8 +58,7 @@
               "RelativeToolTip": "TestBanque\\TestsC_BanqueOk.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAkwFkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T17:30:13.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T17:30:13.81Z"
             },
             {
               "$type": "Document",
@@ -80,8 +83,7 @@
               "RelativeToolTip": "BanqueLib\\Banque.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAswFEAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T00:29:50.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T00:29:50.536Z"
             },
             {
               "$type": "Document",
